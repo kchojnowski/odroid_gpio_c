@@ -10,7 +10,7 @@ int main(int argc, char** argv) {
 	}
 	int fd;
 	
-	if((fd = open(GPIO_EXPORT_FILE, O_RDWR)) < 0) {
+	if((fd = open(GPIO_EXPORT_FILE, O_WRONLY)) < 0) {
 		printf("Error opening file for write: %s\n",GPIO_EXPORT_FILE);
 		return 1;
 	}
